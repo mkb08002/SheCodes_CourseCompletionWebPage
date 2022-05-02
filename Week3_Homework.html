@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍫Chocoholics</title>
+
+    <style>
+      body {
+        background-image: linear-gradient(to top, #cfd9df 100%, #e2ebf0 100%);
+        font-family: monospace;
+        margin: 20px auto;
+        max-width: 800px;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      h3 {
+        text-align: center;
+        color: #7c4f3d;
+      }
+      a {
+        text-decoration: none;
+        color: #7c4f3d;
+        font-weight: bold;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      .landing-page {
+        width: 50%;
+        margin: 30px auto;
+      }
+      a:hover {
+        background-color: antiquewhite;
+      }
+      button {
+        display: block;
+        margin: 30px auto;
+        padding: 15px 20px;
+        color: white;
+        background-color: #7c4f3d;
+        border: 1px solid #7c4f3d;
+        font-size: 14px;
+        font-family: monospace;
+        border-radius: 10px;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+        transition: all 100ms ease-in-out;
+      }
+      button:hover {
+        background-color: white;
+        color: #7c4f3d;
+        cursor: pointer;
+      }
+      .created-by {
+        text-align: center;
+      }
+      .learn-more {
+        background-color: antiquewhite;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="landing-page">
+      <h1>Chocoholics</h1>
+      <br />
+      <h2>Are you a Chocoholic?</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/030/189/original/chocolate.jpg?1648385078"
+        width="300px"
+        alt="Chocolate"
+      />
+      <br />
+      <p>
+        Chocolate is a food product made from roasted and ground cacao pods,
+        that is available as a liquid, solid or paste, on its own or as a
+        flavoring agent in other foods.
+      </p>
+      <p>
+        Chocolate is one of the most popular food types and flavors in the
+        world, and many foodstuffs involving chocolate exist, particularly
+        desserts, including cakes, pudding, mousse, chocolate brownies, and
+        chocolate chip cookies. Many candies are filled with or coated with
+        sweetened chocolate. Chocolate bars, either made of solid chocolate or
+        other ingredients coated in chocolate, are eaten as snacks. Gifts of
+        chocolate molded into different shapes (such as eggs, hearts, coins) are
+        traditional on certain Western holidays, including Christmas, Easter,
+        Valentine's Day, and Hanukkah. Chocolate is also used in cold and hot
+        beverages, such as chocolate milk and hot chocolate, and in some
+        alcoholic drinks, such as creme de cacao.
+      </p>
+      <div class="learn-more">
+        <span>
+          <em
+            >Learn more about chocolate and it's history
+            <a href="https://en.wikipedia.org/wiki/Chocolate" target="_blank">
+              here
+            </a>
+            or find the current
+            <a
+              href="https://www.tastingtable.com/788370/chocolate-brands-ranked-worst-to-best/"
+              target="_blank"
+            >
+              Chocolate Rankings.
+            </a>
+          </em>
+        </span>
+      </div>
+
+      <button>Sign Me Up</button>
+      <h3></h3>
+      <img id="i-love-lucy-img" src="" alt="" />
+      <br />
+      <hr />
+      <div class="created-by">Created by <strong>Kate Burk</strong></div>
+    </div>
+  </body>
+  <script>
+    function sendChocolate() {
+      let h3 = document.querySelector("h3");
+      let name = prompt("What is your name?");
+      let chocolate = prompt("Do you like chocolate?");
+      chocolate = chocolate.toLowerCase();
+
+      if (chocolate === "yes") {
+        h3.innerHTML = "Welcome to Chocoholics, " + name + "! <br> <br>";
+        signUp.innerHTML = "You've Signed Up!";
+      } else {
+        if (chocolate === "no") {
+          h3.innerHTML =
+            "We are sorry to hear your life is devoid of pleasure 🍫🍫🍫";
+        } else {
+          {
+            h3.innerHTML =
+              "You responded with [" +
+              chocolate +
+              "] so please come back when you're ready!";
+          }
+        }
+      }
+      var img = document.getElementById("i-love-lucy-img");
+      if (chocolate === "yes") {
+        img.src =
+          "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/030/148/original/i_love_lucy.gif?1648330260";
+      }
+    }
+    let signUp = document.querySelector("button");
+
+    signUp.addEventListener("click", sendChocolate);
+  </script>
+</html>
